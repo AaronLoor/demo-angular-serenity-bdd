@@ -1,0 +1,64 @@
+# Dependencies
+node_modules/
+dist/
+out-tsc/
+coverage/
+tmp/
+temp/
+
+# Environment files
+.env
+*.local
+*.env.*
+*.local.*
+
+# IDE settings
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Logs and reports
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build outputs
+*.class
+*.jar
+*.war
+*.ear
+*.pyc
+*.pyo
+*.rbc
+
+# Angular specific files
+.angular/
+.angular.cache/
+.angular-cli.json
+.angular.json
+package.json
+tsconfig.json
+tsconfig.app.json
+tsconfig.spec.json
+tsconfig.base.json
+
+# Testing files
+testem.log
+karma.conf.js
+protractor.conf.js
+e2e/
+*.spec.ts
+
+# Cache and temporary files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

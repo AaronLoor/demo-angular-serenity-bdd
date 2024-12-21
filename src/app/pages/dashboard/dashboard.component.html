@@ -1,0 +1,194 @@
+<p-toast position="bottom-right"></p-toast>
+<app-header></app-header>
+<div *ngIf="userLoginOn" class="outer-container">
+  <div class="form-container">
+    <div class="form-title">Client</div>
+    <form [formGroup]="clientForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name <span style="color: red;">*</span></label>
+          <input
+            pInputText
+            type="text"
+            id="name"
+            formControlName="name"
+            placeholder="name"
+          />
+          <small
+            class="p-error"
+            *ngIf="
+              clientForm.get('name')?.touched &&
+              clientForm.get('name')?.errors
+            "
+          >
+            Name field name is required.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last name <span style="color: red;">*</span></label>
+          <input
+            pInputText
+            type="text"
+            id="lastName"
+            formControlName="lastName"
+            placeholder="Last name"
+          />
+          <small
+            class="p-error"
+            *ngIf="
+              clientForm.get('lastName')?.touched &&
+              clientForm.get('lastName')?.errors
+            "
+            >Last name field is required.</small
+          >
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="id">ID <span style="color: red;">*</span></label>
+          <input
+            pInputText
+            type="number"
+            id="id"
+            placeholder="ID"
+            pattern="\d{10}"
+            maxlength="10"
+            formControlName="id"
+          />
+          <small
+            class="p-error"
+            *ngIf="
+              clientForm.get('id')?.touched &&
+              clientForm.get('id')?.errors
+            "
+          >
+          ID field is required with 10 numbers.</small
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="dateBirth">Date of birth <span style="color: red;">*</span></label>
+          <p-calendar id = "dateBirth" formControlName="dateBirth" dateFormat="dd/mm/yy"></p-calendar>
+          <small
+          class="p-error"
+          *ngIf="
+            clientForm.get('dateBirth')?.touched &&
+            clientForm.get('dateBirth')?.errors
+          "
+        >
+        Date of bird field is required.</small
+        >
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Phone <span style="color: red;">*</span></label>
+          <input
+            pInputText
+            type="number"
+            id="phone"
+            placeholder="Phone"
+            pattern="\d{9}"
+            maxlength="9"
+            formControlName="phone"
+          />
+          <small
+            class="p-error"
+            *ngIf="
+              clientForm.get('phone')?.touched &&
+              clientForm.get('phone')?.errors
+            "
+          >
+          Phone field is required with 10 numbers.</small
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="maritalStatus">Marital status <span style="color: red;">*</span></label>
+          <p-dropdown
+            id="maritalStatus"
+            [options]="maritalStatus"
+            formControlName="maritalStatus"
+            placeholder="Select a Marital Status"
+          ></p-dropdown>
+          <small
+            class="p-error"
+            *ngIf="
+              clientForm.get('maritalStatus')?.touched &&
+              clientForm.get('maritalStatus')?.errors
+            "
+          >
+          Marital status field is required.</small
+          >
+        </div>
+      </div>
+
+      <div class="form-row">
+
+        <div class="form-group">
+          <label for="email">Email <span style="color: red;">*</span></label>
+          <input
+            pInputText
+            type="text"
+            id="email"
+            placeholder="Email"
+            formControlName="email"
+          />
+          <small
+            class="p-error"
+            *ngIf="
+              clientForm.get('email')?.touched &&
+              clientForm.get('email')?.errors
+            "
+          >
+          Email field is required</small
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender <span style="color: red;">*</span></label>
+          <p-dropdown
+            id="gender"
+            [options]="gender"
+            formControlName="gender"
+            placeholder="Select a Gender"
+          ></p-dropdown>
+          <small
+            class="p-error"
+            *ngIf="
+              clientForm.get('gender')?.touched &&
+              clientForm.get('gender')?.errors
+            "
+          >
+          Gender field is required.</small
+          >
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="address">Address <span style="color: red;">*</span></label>
+          <input
+            pInputText
+            type="text"
+            id="address"
+            formControlName="address"
+            placeholder="Address"
+          />
+          <small
+            class="p-error"
+            *ngIf="
+              clientForm.get('address')?.touched &&
+              clientForm.get('address')?.errors
+            "
+          >
+          Address field is required.</small
+          >
+        </div>
+      </div>
+      <button id="buttonRegister" type="submit" (click)="validate()">Register</button>
+    </form>
+  </div>
+</div>

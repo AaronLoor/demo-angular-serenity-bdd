@@ -1,0 +1,17 @@
+[
+  {
+    "message":"Autenticaciòn ok",
+    "id": "1",
+    "email":"aaron.user@serenity.ec",
+    "user":"aaron",
+    "password":"password"
+  },
+  {
+    "message":"Autenticaciòn ok",
+    "id": "2",
+    "email":"diego.user@serenity.ec",
+    "user":"diego",
+    "password":"password"
+  }
+
+]
