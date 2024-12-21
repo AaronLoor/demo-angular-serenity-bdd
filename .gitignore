@@ -43,13 +43,6 @@ desktop.ini
 # Angular specific files
 .angular/
 .angular.cache/
-.angular-cli.json
-.angular.json
-package.json
-tsconfig.json
-tsconfig.app.json
-tsconfig.spec.json
-tsconfig.base.json
 
 # Testing files
 testem.log
